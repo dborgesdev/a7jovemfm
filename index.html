@@ -128,56 +128,21 @@
             <h2 id="live-title">Aperte o play.<br />O resto é com a gente</h2>
           </div>
           <div class="player-wrap">
-            <div class="player">
-              <button
-                id="play-toggle"
-                class="play-toggle"
-                aria-label="Reproduzir A7 Jovem FM"
-                aria-pressed="false"
-              >
-                <span aria-hidden="true">▶</span>
-              </button>
-              <img
-                class="player-mark"
-                src="/images/a7-jovem-logo-white-transparent.png"
-                width="1166"
-                height="941"
-                alt=""
-              />
-              <div class="player-info">
-                <strong>A7 Jovem FM</strong
-                ><span class="live-label"
-                  ><span class="live-dot" aria-hidden="true"></span> Ao
-                  vivo</span
-                ><span
-                  id="song-title"
-                  class="song-title"
-                  aria-live="polite"
-                  aria-atomic="true"
-                  >A7 Jovem FM • Ao vivo</span
-                ><span id="player-status" role="status">Pronto para ouvir</span>
-              </div>
-              <label class="volume" for="volume"
-                ><span>Volume</span
-                ><input
-                  id="volume"
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.05"
-                  value="0.8"
-              /></label>
+            <div class="player player-embed">
+              <iframe
+                id="radio-player"
+                title="A7 Jovem FM — rádio ao vivo"
+                width="100%"
+                height="80"
+                loading="eager"
+                allow="autoplay"
+              ></iframe>
             </div>
-            <p id="player-error" role="alert" hidden>
-              Não foi possível conectar ao stream. Tente o play novamente ou
-              abra o app.
-            </p>
           </div>
         </div>
-        <audio id="radio-audio" preload="none"></audio>
         <noscript
           ><p class="container">
-            Ative o JavaScript para usar os controles de áudio e acessar o app.
+            Ative o JavaScript para carregar o player e acessar o app.
           </p></noscript
         >
       </section>
